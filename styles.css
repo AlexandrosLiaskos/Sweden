@@ -445,24 +445,43 @@ a:hover::after {
 
 /* Images */
 .image-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--surface-solid);
+    border-radius: var(--card-radius);
+    border: var(--glass-border);
 }
 
 .guide-image {
-    width: 100%;
-    height: 150px;
+    width: 250px;
+    height: 180px;
     object-fit: cover;
     border-radius: var(--item-radius);
-    border: var(--glass-border);
-    transition: transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
 }
 
 .guide-image:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    border-color: var(--teal);
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .guide-image {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
+    
+    .image-container {
+        padding: 0.75rem;
+    }
 }
 
 /* Centered items layout */
