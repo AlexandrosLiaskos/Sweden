@@ -900,3 +900,98 @@ footer {
     line-height: 1.6;
     font-size: 0.95rem;
 }
+
+/* Mobile responsiveness fixes */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        padding: 1rem 0.5rem;
+    }
+
+    .container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .card {
+        margin: 1rem 0;
+        padding: 1.5rem 1rem;
+        border-radius: var(--item-radius);
+    }
+
+    .culture-section {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .culture-item {
+        padding: 1.2rem;
+    }
+
+    .culture-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .culture-item h4 {
+        font-size: 1rem;
+    }
+
+    .culture-item p {
+        font-size: 0.9rem;
+    }
+
+    .image-container {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .guide-image {
+        height: 200px;
+    }
+
+    /* Fix for section 9 visibility */
+    #sweden {
+        overflow: visible;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Ensure proper stacking context */
+    section {
+        position: relative;
+        z-index: auto;
+    }
+
+    /* Fix for sticky nav potentially covering content */
+    nav {
+        z-index: 1000;
+    }
+
+    nav + main {
+        padding-top: 1rem;
+    }
+}
+
+/* Additional fixes for very small screens */
+@media (max-width: 480px) {
+    .culture-item {
+        margin: 0.5rem 0;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .guide-image {
+        height: 180px;
+    }
+}
