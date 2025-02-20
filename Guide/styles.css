@@ -30,8 +30,8 @@ body {
     color: var(--text);
     background: var(--dark-bg);
     background-image: 
-        radial-gradient(circle at 100% 0%, rgba(57, 194, 201, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 0% 100%, rgba(255, 214, 10, 0.05) 0%, transparent 40%);
+        radial-gradient(ellipse farthest-corner at 100% -20%, rgba(57, 194, 201, 0.008) 0%, transparent 90%),
+        radial-gradient(ellipse farthest-corner at -20% 120%, rgba(255, 214, 10, 0.004) 0%, transparent 90%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -921,33 +921,4 @@ footer {
     margin: 0;
     line-height: 1.6;
     font-size: 0.95rem;
-}
-
-/* Nature destination items */
-.nature-item {
-    background: linear-gradient(135deg, rgba(16, 79, 42, 0.1), rgba(0, 79, 89, 0.1));
-    border: 1px solid rgba(0, 255, 179, 0.1);
-}
-
-.nature-item:hover {
-    background: linear-gradient(135deg, rgba(16, 79, 42, 0.2), rgba(0, 79, 89, 0.2));
-    border-color: rgba(0, 255, 179, 0.2);
-}
-
-.nature-item > i {
-    color: #00ffa2;
-    text-shadow: 0 0 20px rgba(0, 255, 162, 0.3);
-}
-
-.nature-item .destination-features li i {
-    color: #00ffa2;
-}
-
-.nature-item h4 {
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.nature-item .destination-type {
-    color: #00ffa2;
 }
